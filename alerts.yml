@@ -1,9 +1,0 @@
-groups:
-- name: requests failure
-  rules:
-  - alert: internal server error
-    expr: request_count_total{http_status="500"} > 0
-    for: 1m
-    annotations:
-      severity: critical
-      description: internal server error
